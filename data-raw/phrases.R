@@ -5,12 +5,12 @@ MEANING=c()
 for (i in c(LETTERS[1:23], "XYZ")) {
   data <-
     read_html(paste0("https://www.englishclub.com/ref/Phrasal_Verbs/", i, "/"))
-  col1 <-
-    data %>% html_nodes("h3") %>% html_text() %>% gsub("^[\n]$", "", .) %>% gsub("\n", " ", .)
-  col1 <-
-    data %>% html_nodes("h3") %>% html_text() %>% gsub("^\n", "", .) %>% gsub("\n$", "", .) %>% gsub("\n", " ", .)
-  col2 <-
-    data %>% html_nodes("#ec-main") %>% html_nodes(".linkdescription") %>% html_text()
+  col1 <- data %>% html_nodes("h3.linktitle") %>%
+    html_text() %>% stringr::str_replace_all("\n"," ") %>% stringr::str_trim(side = "both")
+  
+  col2 <- data %>% html_nodes("div.linkdescription") %>%
+    html_text() %>% stringr::str_replace_all("\n"," ") %>% stringr::str_trim(side = "both")
+  
   # print(col1)
   # print(col2)
   PHRASES = c(PHRASES, col1)
