@@ -1,3 +1,8 @@
+if (!suppressWarnings(require(tidyverse))) install.packages("tidyverse")
+if (!suppressWarnings(require(rvest))) install.packages("rvest")
+if (!suppressWarnings(require(usethis))) install.packages("usethis")
+if (!suppressWarnings(require(devtools))) install.packages("devtools")
+
 library(tidyverse)
 library(rvest)
 PHRASES=c()
@@ -18,5 +23,5 @@ for (i in c(LETTERS[1:23], "XYZ")) {
 }
 phrases <- tibble(PHRASES,MEANING)
 
-devtools::use_data(phrases, overwrite = TRUE)
+usethis::use_data(phrases, overwrite = TRUE)
 
