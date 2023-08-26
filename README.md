@@ -7,7 +7,7 @@ I believe it would be a good learning resource to improve English within R.
 
 ## Example
 
-Install with `devtools::install_github("sumanstats/phrases")`.
+Install with `devtools::install_github("sumanstats/phrases")` or `remotes::install_github("sumanstats/phrases")`.
 
 To see all the phrasal verbs execute:
 ``` r
