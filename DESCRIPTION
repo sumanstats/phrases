@@ -1,10 +1,10 @@
 Package: phrases
-Title: Phrasal verbs in English Club website
+Title: Phrasal Verbs in English Club Website
 Version: 0.1
 Authors@R: 
     person("Suman", "Khanal", email = "suman81765@gmail.com", role = c("aut","cre"), 
            comment = c(ORCID = "0000-0001-6563-6294"))
-Description: Contains all phrasal verbs listed in https://www.englishclub.com/ref/Phrasal_Verbs/
+Description: Contains all phrasal verbs listed in <https://www.englishclub.com/ref/Phrasal_Verbs/>
             as data frame. Useful for educational purpose as well as for text mining.
 URL: https://github.com/sumanstats/phrases
 Depends: R (>= 4.1.0)
